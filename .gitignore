@@ -1,0 +1,101 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+*.egg
+build/
+dist/
+wheels/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Data / run artefacts
+*.npz
+*.pkl
+*.h5
+*.npy
+*.log
+*.bak
+results/
+checkpoints/
+
+# Bundled benchmark data must ship with the package (overrides *.npz above).
+# Listed file by file: the data directory also accumulates local scratch
+# datasets that no benchmark module loads, and those must stay untracked.
+!daedalus/benchmarks/data/au_mic_tess_s1.npz
+!daedalus/benchmarks/data/kic6603624_pds.npz
+!daedalus/benchmarks/data/sdss_galaxy.npz
+!daedalus/benchmarks/data/wasp47_tess_multisector.npz
+!daedalus/benchmarks/data/wasp47_tess_s42.npz
+
+# Manuscript material is kept local and is not distributed with the code:
+# the LaTeX source, the bibliography, and the scripts that render its figures.
+paper/
+figures/
+
+# Local-only design, spec, and working notes
+*_spec.md
+*_design.md
+*_handoff.md
+docs/path2_robust_likelihood.md
+sources/
+
+# Docs build
+docs/_build/
+docs/api/_autogen/
+# Local reStructuredText copy of docs/algorithm.md; there is no Sphinx build,
+# so the Markdown version is the single tracked source.
+docs/algorithm.rst
+
+# scripts/ is an allow-list: it holds exactly the code that reproduces a
+# result in the published paper, and nothing else. Exploratory runs,
+# kernel studies, and one-off diagnostics stay local. To publish a new
+# script, add it here alongside an entry in scripts/README.md.
+scripts/*
+!scripts/README.md
+!scripts/insertion_index.py
+!scripts/diabetes_paper.py
+!scripts/diabetes_dummy_ablation.py
+!scripts/hd10180_lovis_labelled.py
+!scripts/hd10180_de_campaign.py
+!scripts/hd10180_paper_run.py
+!scripts/hd10180_fake_planet.py
+!scripts/hd10180_fixed_dim_bf.py
+!scripts/hd10180_rb_b.py
+!scripts/insertion_index_hd10180.py
+!scripts/insertion_index_validate.py
+!scripts/sx_car_reduce.py
+!scripts/sx_car_run.py
+!scripts/kic_peak_bagging.py
+!scripts/real_data_chains.py
+!scripts/real_data_confirmatory.py
+!scripts/sdss_emission_lines.py
+!scripts/sbc_paper.py
+!scripts/sbc_diagnostic_nlive.py
+!scripts/sbc_rao_blackwell_validate.py
+!scripts/sbc_is_rb_validate.py
+!scripts/polynomial_scaling.py
+!scripts/polynomial_scaling_extra.py
